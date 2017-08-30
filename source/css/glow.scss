@@ -1,0 +1,14 @@
+@import "partials/_variables.scss";
+@import "partials/_normalize.scss";
+@import "partials/_layout.scss";
+
+html {
+    font-size: 62.5%;
+    text-rendering: optimizeLegibility;
+    // color: $color-font;
+}
+
+// body {
+//     font: 300 16px/1.8 -apple-system, BlinkMacSystemFont,Verdana, "Helvetica Neue", Helvetica,"PingFang SC","Lantinghei SC", "Microsoft Yahei","Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
+//     background-image: url('../img/bg_paper_light.png');
+// }

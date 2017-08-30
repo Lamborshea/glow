@@ -1,0 +1,27 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/glow.css
+- /lib/highlight/highlight-gruvbox-dark.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/glow.js
+
+lib:
+- /lib/jquery-3.2.1.min.js
+- /lib/highlight/highlight.pack.js
+- /lib/highlight/activeHighlight.js
