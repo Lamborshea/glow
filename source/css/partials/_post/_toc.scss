@@ -1,0 +1,50 @@
+.post-toc {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    max-width: 200px;
+    margin: 1em 1em 0 0;
+    padding: 0 1em;
+    border-radius: 5px;
+
+    background-color: rgba(248, 245, 236, 0.6);
+
+    font: $color-font;
+
+    .post-toc-title {
+        margin-left: 1em;
+        font-size: $post-toc-title-size;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .post-toc-content {
+
+        .toc,
+        .toc-child {
+            list-style: $post-toc-list-style;
+        }
+
+        .toc {
+            padding-left: 2em;
+
+            .toc-child {
+                padding-left: 1.5em;
+            }
+        }
+
+        .toc-link {
+            color: $color-font;
+
+            &:hover {
+                color: $color-link;
+            }
+        }
+
+
+        .toc-link.active {
+            color: #c05b4d;
+        }
+    }
+}

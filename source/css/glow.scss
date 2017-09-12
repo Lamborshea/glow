@@ -1,14 +1,12 @@
 @import "partials/_variables.scss";
 @import "partials/_normalize.scss";
+@import "partials/_grid.scss";
+@import "partials/_base.scss";
+@import "partials/_global.scss";
 @import "partials/_layout.scss";
 
-html {
-    font-size: 62.5%;
-    text-rendering: optimizeLegibility;
-    color: $color-font;
-}
+/* components */
+@import "partials/components/_backToTop.scss";
 
-body {
-    font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,Verdana,"PingFang SC","Lantinghei SC", "Microsoft Yahei","Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
-    background-image: url('../img/bg_paper_light.png');
-}
+@import "partials/_post/_toc.scss";
+// @import "partials/_responsive.scss";

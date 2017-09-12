@@ -1,0 +1,54 @@
+#backtoTop {
+    position: fixed;
+    bottom: 5%;
+    right: -100px;
+    z-index: 99;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+
+    background-color: #eee;
+
+    &.display {
+        right: 10px;
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: 0;
+
+    width: 48px;
+    height: 48px;
+
+    line-height: 48px;
+    text-align: center;
+
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:before {
+        content:attr(data-percent);
+    }
+    &:hover:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "";
+        // 如果加载了font-awesome，就是把content置为空，如果没有加载font-awesome，就把content置为“\f176”（向上箭头）
+        // content: "\f176";
+    }
+}
+
+#backtoTop i{
+    font-size: 20px;
+}

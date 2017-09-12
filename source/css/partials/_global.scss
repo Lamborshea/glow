@@ -1,0 +1,14 @@
+html {
+    font-size: 62.5%;
+    text-rendering: optimizeLegibility;
+    color: $color-font;
+}
+
+body {
+    font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,Verdana,"PingFang SC","Lantinghei SC", "Microsoft Yahei","Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
+    // background-image: url('../img/bg_paper_light.png');
+}
+
+* {
+    box-sizing: border-box;
+}

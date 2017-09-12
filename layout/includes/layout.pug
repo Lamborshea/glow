@@ -5,41 +5,59 @@
 - if (is_category()) pageTitle = 'Category: ' + page.category
 - if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 - if (is_year()) pageTitle += ': ' + page.year
-- pageTitle += ' [ ' + config.title + ' ]'
-
+//- - if (is_current('/about') pageTitle += '啊哈哈哈'
+//- - pageTitle += ' [ ' + config.title + ' ]'
+        //- each url, label in theme.menu
 doctype html
 html(lang=config.language)
   head
     meta(charset='UTF-8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
+    include head.pug
     title= pageTitle
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from config.yml
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)
-    link(rel="icon", href=config.root + 'img/favicon.ico')
+    //- link(rel="icon", href=config.root + 'img/favicon.ico')
+    link(rel="icon", href=theme.favicon)
   body
-    #menu-outer
-      nav#menu-inner
-        each url, label in theme.menu
-          a(href=url)= label
+  #menu-outer.container-fluid
+    nav#menu-inner
+      ul.navbar-menu
+          li.navbar-item
+            a(href=url_for()).navbar-item-link= __('menu.home')
+          li.navbar-item
+            a(href=url_for('archives')).navbar-item-link= __('menu.archives')
+          li.navbar-item
+            a(href=url_for('tags')).navbar-item-link=__('menu.tags')
+          li.navbar-item
+            a(href=url_for('projects')).navbar-item-link= __('menu.projects')
+          li.navbar-item
+            a(href=url_for('about')).navbar-item-link= __('menu.about')
+  .container
     #content-outer
       #content-inner
         if body
           div!= body
         else
           block content
-      #content-aside
     #bottom-outer
       #bottom-inner
-        span Site construction by
-        span= ' ' + config.author + ' '
-        span using
-        a(href='http://hexo.io')
-          span hexo blog framework
-        span .
-        br
-        a(href=config.root) Home
+        p.footer
+          span.powered-by Site theme
+            a(href="https://github.com/Lamborshea/glow")
+              span=' ' + config.theme
+          span.powered-by Designed by
+            a(href="https://github.com/Lamborshea/")
+              span=' ' + config.author
+          span.powered-by Powered by
+            a(href='http://hexo.io')
+              span= ' ' + 'hexo'
+        p.footer
+          a(href=config.root) Home
+include ../components/backToTop.pug
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts

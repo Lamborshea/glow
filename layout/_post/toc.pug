@@ -1,0 +1,4 @@
+if is_post() && toc(page.content)
+  .post-toc#post-toc
+    h2.post-toc-title=__('posts.toc')
+    .post-toc-content!=toc(page.content,{list_number: false})

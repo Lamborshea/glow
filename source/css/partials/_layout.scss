@@ -1,17 +1,62 @@
+/* ======================= menu =========================
+=======================================================
+ */
 #menu-outer {
-    height: 100px;
+    padding: .2em 0;
+    background-color: $color-menu-outer-bg;
 }
 
+#menu-inner {
+    text-align: center;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.navbar-item-link {
+  color: $color-font-opposite;
+}
+
+/* ================ content ==================
+=============================================
+*/
 #content-outer {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid $color--outer-border;
     max-width: 80%;
+    padding: 2em;
     margin: 0 auto;
+    background-color: #fff;
 }
-
 
 #content-inner {
+    float: left;
     width: 80%;
 }
-#content-aside {
-    width: 15%;
-    margin-left: 5%;
+
+/* ============= bottom =========================
+===============================================
+*/
+#bottom-outer {
+    text-align: center;
+}
+
+#bottom-inner {
+    margin: .5em 0;
+}
+
+.footer {
+    margin: 0;
+    font-size: .75em;
+}
+
+.powered-by {
+    padding-right: .75em;
+}
+
+.footer a {
+    color: darkcyan;
 }

@@ -1,22 +1,24 @@
 
 # html lang
-language: en
+language:
 
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Contact: /contact
   Archives: /archives
+  Tags: /tags
+  Projects: /projects
+  Contact: /contact
+  About: /about
 
 # Miscelaneous
-favicon: /favicon.ico
+favicon: /img/favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/glow.css
 - /lib/highlight/highlight-gruvbox-dark.css
-
+- /fonts/font-awesome-4.7.0/css/font-awesome.min.css
 # scripts loaded in the end of the body
 scripts:
 - /js/glow.js
@@ -25,3 +27,4 @@ lib:
 - /lib/jquery-3.2.1.min.js
 - /lib/highlight/highlight.pack.js
 - /lib/highlight/activeHighlight.js
+- /lib/backToTop.js

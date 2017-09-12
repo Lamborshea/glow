@@ -1,0 +1,9 @@
+if config.description
+  meta(name="description" content=config.description)
+if page.description
+  meta(name="description" content=page.description)
+if config.keywords
+  meta(name="keywords" content=config.keywords)
+if page.tags!== undefined && page.tags.length > 0
+  for tag in page.tags
+    meta(name="keywords" content=tag)
