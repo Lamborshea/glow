@@ -1,10 +1,21 @@
-
 if site.posts.length > 0
   #recent-posts
-    h1 Recent Posts
-    each post in site.posts.sort('date', -1).limit(10).toArray()
-      .recent-post-item
-        a(href=config.root + post.path)= post.title
-        if post.date
-          time(datetime=post.date.toJSON())= date(post.date, date_format)
-
+    .container-fluid
+      .row.justify-content-center
+      .col
+        h1
+          i.fa.fa-book.fa-fw
+          span 最新文章
+        each post in site.posts.sort('date', -1).limit(10).toArray()
+          .recent-post-item.card
+            .recent-post-item-title
+              a.post-title-link(href=config.root + post.path)= post.title
+            if post.date
+              time.card-subtitle(datetime=post.date.toJSON())= date(post.date, date_format)
+            if post.excerpt
+              .card-body
+                .recent-post-item-content!=post.excerpt
+                .recent-post-item-cover
+            hr.division
+            .recent-post-item-footer
+              a.recent-post-item-link(href=config.root + post.path) 阅读全文

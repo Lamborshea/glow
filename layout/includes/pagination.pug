@@ -3,9 +3,9 @@ nav#pagination
 
   //- previous page link, some pages may have a different url
   if page.prev_link
-    a(class='prev', href=url_for(page.prev_link))!= '&larr; Prev'
+    a.pagination-link(class='prev', href=url_for(page.prev_link))!= __('posts.prev_post')
   else if page.prev && page.prev.path
-    a(class='prev', href=url_for(page.prev.path))!= '&larr; Prev'
+    a.pagination-link(class='prev', href=url_for(page.prev.path))!= __('posts.prev_post')
 
   //- show the page counts if there are any
   if typeof page.current === 'number' && typeof page.total === 'number'
@@ -14,7 +14,7 @@ nav#pagination
 
   //- next page link, again the logic is different on different pages
   if page.next_link
-    a(class='next', href=url_for(page.next_link))!= 'Next &rarr;'
+    a.pagination-link(class='next', href=url_for(page.next_link))!= __('posts.next_post')
   else if page.next && page.next.path
-    a(class='next', href=url_for(page.next.path))!= 'Next &rarr;'
+    a.pagination-link(class='next', href=url_for(page.next.path))!= __('posts.next_post')
 

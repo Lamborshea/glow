@@ -1,8 +1,36 @@
 #post a {
-    color: $color-link;
-    border-bottom: 1px dotted;
+    color: theme-color("link");
+    border-bottom: 1px solid;
+
+    &:hover {
+      color: $color-font;
+      }
 }
 
-#post a:hover {
-    color: $color-font;
+.pagination-link {
+  font-size: 1.2em;
+  color: $color-font;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.division {
+  width: 100%;
+  margin-top: .25em;
+  margin-bottom: .5em;
+  border-color: rgb(222, 222, 222);
+  border-top: none;
+}
+
+.post-title-link {
+  font-size: 1.5em;
+  color: $gray-900;
+}
+
+.recent-post-item-link {
+  color: $gray-600;
+  &:hover {
+    color: darken($gray-600, 20%)
+  }
 }

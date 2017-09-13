@@ -2,13 +2,24 @@ html {
     font-size: 62.5%;
     text-rendering: optimizeLegibility;
     color: $color-font;
+    // color: $color-font-wentianxin;
 }
 
 body {
     font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,Verdana,"PingFang SC","Lantinghei SC", "Microsoft Yahei","Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
     // background-image: url('../img/bg_paper_light.png');
+    background-color: $color-wengtianxin-bg;
 }
 
-* {
-    box-sizing: border-box;
+blockquote {
+  position: relative;
+  color: #999;
+  font-weight: 400;
+  border-left: 1px solid #1abc9c;
+  padding-left: 1em;
+  margin: 1em 3em 1em 1em;
+}
+
+p code {
+  color: lighten($color-post-link,5%);
 }

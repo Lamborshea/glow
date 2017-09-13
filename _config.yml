@@ -1,4 +1,3 @@
-
 # html lang
 language:
 
@@ -6,13 +5,14 @@ language:
 menu:
   Home: /
   Archives: /archives
-  Tags: /tags
+  Tags: /tag
   Projects: /projects
   Contact: /contact
   About: /about
 
 # Miscelaneous
 favicon: /img/favicon.ico
+logo: Nanbo
 
 # stylesheets loaded in the <head>
 stylesheets:

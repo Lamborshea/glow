@@ -1,11 +1,94 @@
-$color-body-bg: #fff;
+
+/* color */
+$white:   #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:   #000 !default;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$color-body-bg: $white;
 $color-menu-outer-bg: #24292e;
 $color-font: #333;
 $color-font-opposite: #eee;
 $color-link: #1abc9c;
 $color--outer-border: #ebebeb;
+$color-post-link: #cf4a5c;
+$color-wengtianxin-bg: #fafbff;
+$color-font-wentianxin: rgba(0, 0, 0, 0.8);
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+  link: $color-post-link
+) !default;
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+$border-radius:          .25rem !default;
+/* font */
+$font-size-base: 1rem !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
 
 /* toc */
 $post-toc-width: 200px !default;
 $post-toc-title-size: 20px !default;
 $post-toc-list-style: square !default;
+
+/* components */
+
+// card
+$card-bg:                  $white !default;
+$card-border-radius:       $border-radius !default;
+$card-border-width:        1px !default;
+$card-border-color:        rgba($black,.125) !default;
+$card-spacer-y:            .75rem !default;
+$card-spacer-x:            1.25rem !default;
+
+// btn
+$btn-font-weight:                $font-weight-normal !default;
+$btn-transition:                 all .15s ease-in-out !default;
+$btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
+$input-btn-padding-y:       .5rem !default;
+$input-btn-padding-x:       .75rem !default;
+$input-btn-line-height:     1.25 !default;
+$btn-border-radius:              $border-radius !default;
+$card-cap-bg:              rgba($black, .03) !default;
+$card-border-color:        rgba($black,.125) !default;
+$card-border-width:        1px !default;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;

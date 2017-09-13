@@ -1,11 +1,41 @@
-@media screen and (min-width: 1200px) {
-    #
+@media (min-width: 576px) {
+  // #post-toc {
+  //   display: none;
+  // }
 }
 
-@media screen and (min-width: 992px) {
-
+@media (min-width: 768px) {
+  // #post-toc {
+  //   display: none;
+  // }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 992px) {
+  #post {
+    width: 80%;
+  }
+  #post-toc {
+    display: block;
+  }
 
+}
+@media (min-width: 1200px) {
+  #post {
+    width: 80%;
+  }
+  #post-toc {
+    display: block;
+  }
+}
+
+@media (min-width: 1367px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media only screen and ( max-width: 640px ) {
+  blockquote {
+    margin: 1em 0;
+  }
 }

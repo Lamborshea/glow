@@ -5,8 +5,11 @@
 @import "partials/_global.scss";
 @import "partials/_layout.scss";
 
+/* mixins */
+@import "partials/mixins/_border-radius.scss";
+@import "partials/mixins/_buttons.scss";
 /* components */
+@import "partials/components/_card.scss";
 @import "partials/components/_backToTop.scss";
-
 @import "partials/_post/_toc.scss";
-// @import "partials/_responsive.scss";
+@import "partials/_responsive.scss";
