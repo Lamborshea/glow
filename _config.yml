@@ -21,7 +21,7 @@ stylesheets:
 - /fonts/font-awesome-4.7.0/css/font-awesome.min.css
 # scripts loaded in the end of the body
 scripts:
-- /js/glow.js
+# - /js/glow.js
 
 lib:
 - /lib/jquery-3.2.1.min.js

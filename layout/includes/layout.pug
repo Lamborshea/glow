@@ -62,13 +62,16 @@ html(lang=config.language)
             span.powered-by Powered by
               a.footer-link(href='http://hexo.io')
                 span= ' ' + 'hexo'
+          p.footer.row.justify-content-center!= "Hosted by&nbsp;"
+            a(href="https://pages.coding.me" style="font-weight: bold")="Coding Pages"
           //- p.footer.row.justify-content-center
           //-   a.footer-link(href=config.root) Home
     include ../components/backToTop.pug
-    if theme.scripts !== undefined && theme.scripts.length > 0
+    if theme.scripts !== null && theme.scripts.length > 0
         //- scripts list from config.yml
         each url in theme.scripts
           script(src=url)
-    if theme.lib !== undefined && theme.lib.length > 0
-        each urlOfUrl in theme.lib
-          script(src=urlOfUrl)
+    script(src="/lib/jquery-3.2.1.min.js")
+    script(src="/lib/highlight/highlight.pack.js")
+    script(src="/lib/backToTop.js")
+    script(src="/js/glow.js")

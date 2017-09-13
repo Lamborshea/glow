@@ -29,9 +29,9 @@ git pull
 
 ## General
 
-Author : [Lambor_shea](https://github.com/Lamborshea)
-Version : 1.0.0
-Compatibility : Node v4 or later, Hexo v3.0.0 or later
+Author : [Lambor_shea](https://github.com/Lamborshea)  
+Version : 1.0.0  
+Compatibility : Node v4 or later, Hexo v3.0.0 or later  
 
 ## running and deploying
 

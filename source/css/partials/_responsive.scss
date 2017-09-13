@@ -1,18 +1,15 @@
 @media (min-width: 576px) {
-  // #post-toc {
-  //   display: none;
-  // }
+
 }
 
 @media (min-width: 768px) {
-  // #post-toc {
-  //   display: none;
-  // }
+
 }
 
 @media (min-width: 992px) {
   #post {
-    width: 80%;
+    width: 75%;
+    margin-right: 2em;
   }
   #post-toc {
     display: block;
@@ -21,7 +18,8 @@
 }
 @media (min-width: 1200px) {
   #post {
-    width: 80%;
+    width: 75%;
+    margin-right: 2em;
   }
   #post-toc {
     display: block;
