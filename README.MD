@@ -14,7 +14,6 @@ npm install --save hexo-renderer-scss
 
 ### Configure
 Modify the theme field in `Blog/_config.yml` by changing `theme` variable to `glow`: `theme: glow`
-
 Close the highlight in `Blog/_config.yml` by changing `highlight` variable to `false`:
 ```
 highlight:
