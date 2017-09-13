@@ -13,8 +13,13 @@ npm install --save hexo-renderer-scss
 ```
 
 ### Configure
-Modify the theme field in _config.yml by changing theme variable to glow: `theme: glow`
+Modify the theme field in `Blog/_config.yml` by changing `theme` variable to `glow`: `theme: glow`
 
+Close the highlight in `Blog/_config.yml` by changing `highlight` variable to `false`:
+```
+highlight:
+  enable: false
+```
 ### Update theme
 
 ```
@@ -27,3 +32,10 @@ git pull
 Author : [Lambor_shea](https://github.com/Lamborshea)
 Version : 1.0.0
 Compatibility : Node v4 or later, Hexo v3.0.0 or later
+
+## running and deploying
+```bash
+hexo clean
+hexo g
+hexo s
+```
