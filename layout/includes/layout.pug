@@ -1,5 +1,6 @@
 
-- var pageTitle = page.title || config.subtitle || ''
+- var pageTitle
+- if (is_home()) pageTitle = config.title || config.subtile || 'Hexo'
 - if (is_archive()) pageTitle = 'Archives'
 - if (is_tag()) pageTitle = 'Tag: ' + page.tag
 - if (is_category()) pageTitle = 'Category: ' + page.category
@@ -26,7 +27,10 @@ html(lang=config.language || theme.language)
     link(rel="stylesheet", href=config.root + "fonts/font-awesome-4.7.0/css/font-awesome.min.css")
     link(rel='stylesheet', href=config.root + 'css/glow.css')
     //- link(rel="icon", href=config.root + 'img/favicon.ico')
-    link(rel="icon", href=theme.favicon)
+    if theme.favicon
+      link(rel="icon", href=theme.favicon)
+    if config.favicon
+      link(rel="icon", href=config.favicon)
   body
     #menu-outer.container-fluid
       nav#menu-inner.row.justify-content-center
