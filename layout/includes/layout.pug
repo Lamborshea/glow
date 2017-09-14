@@ -1,7 +1,7 @@
 
 - var pageTitle = config.title || 'Hexo'
 - if (is_home()) pageTitle = config.title || config.subtile || 'Hexo'
-- if (is_post()) pageTitle = post.title || config.title || 'Hexo'
+- if (is_post()) pageTitle = post.title || 'Hexo'
 - if (is_archive()) pageTitle = 'Archives'
 - if (is_tag()) pageTitle = 'Tag: ' + page.tag
 - if (is_category()) pageTitle = 'Category: ' + page.category
