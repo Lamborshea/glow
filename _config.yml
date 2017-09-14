@@ -17,7 +17,7 @@ menu:
 # favicon: /img/favicon.icon
 # also can add permalink of your cdn or cloud link,just link this:
 # favicon: http://ono38scfe.bkt.clouddn.com/favicon_tree.ico
-favicon: /img/favicon.ico
+favicon: http://ono38scfe.bkt.clouddn.com/favicon_tree.ico
 logo: Nanbo
 
 # stylesheets loaded in the <head> use url just link this:
