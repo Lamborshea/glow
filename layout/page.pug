@@ -2,7 +2,14 @@ extends includes/layout.pug
 
 block content
   article#page
-    h1= page.title
     != page.content
+    if is_current('about')
+      include partials/about
+    else if is_current('projects')
+      include partials/projects
+    else if is_current('tags')
+      include partials/tags.pug
+    else if is_current('categories')
+      include partials/categories.pug
   include includes/pagination.pug
 

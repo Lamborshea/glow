@@ -5,21 +5,26 @@
 - if (is_category()) pageTitle = 'Category: ' + page.category
 - if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
 - if (is_year()) pageTitle += ': ' + page.year
+//- - if(theme.stylesheets) var stylesheets = theme.stylesheets
 //- - if (is_current('/about') pageTitle += '啊哈哈哈'
 //- - pageTitle += ' [ ' + config.title + ' ]'
         //- each url, label in theme.menu
 doctype html
-html(lang=config.language)
+html(lang=config.language || theme.language)
   head
     meta(charset='UTF-8')
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
     include head.pug
     title= pageTitle
-    if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+    if theme.stylesheets !== null && theme.stylesheets.length > 0
       //- stylesheets list from config.yml
-      each url in theme.stylesheets
+      each url in thems.stylesheets
         link(rel='stylesheet', href=url)
+
+    link(rel="stylesheet", href=config.root + "lib/highlight/highlight-gruvbox-dark.css")
+    link(rel="stylesheet", href=config.root + "fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+    link(rel='stylesheet', href=config.root + 'css/glow.css')
     //- link(rel="icon", href=config.root + 'img/favicon.ico')
     link(rel="icon", href=theme.favicon)
   body
@@ -71,7 +76,7 @@ html(lang=config.language)
         //- scripts list from config.yml
         each url in theme.scripts
           script(src=url)
-    script(src="/lib/jquery-3.2.1.min.js")
-    script(src="/lib/highlight/highlight.pack.js")
-    script(src="/lib/backToTop.js")
-    script(src="/js/glow.js")
+    script(src=config.root + "lib/jquery-3.2.1.min.js")
+    script(src=config.root + "lib/highlight/highlight.pack.js")
+    script(src=config.root + "lib/backToTop.js")
+    script(src=config.root + "js/glow.js")

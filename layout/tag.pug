@@ -1,17 +1,16 @@
 extends includes/layout.pug
 
 block content
-if is_current(tags)
   div#tag
     h1= '哈哈哈我是tag.pug...Tag: ' + page.tag
-    - page.posts.each(function(article){
-      if article.link
-        a(href=url_for(article.link) target="_blank")
-          = article.title || 'No Title'
-        time(datetime=date_xml(article.date))= date(article.date)
-      else
-        a(href=url_for(article.path))= article.title || 'No Title'
-        time(datetime=date_xml(article.date))= date(article.date)
-      br.clear
-    - })
-  include includes/pagination.pug
+    //- - page.posts.each(function(article){
+    //-   if article.link
+    //-     a(href=url_for(article.link) target="_blank")
+    //-       = article.title || 'No Title'
+    //-     time(datetime=date_xml(article.date))= date(article.date)
+    //-   else
+    //-     a(href=url_for(article.path))= article.title || 'No Title'
+    //-     time(datetime=date_xml(article.date))= date(article.date)
+    //-   br.clear
+    //- - })
+  //- include includes/pagination.pug

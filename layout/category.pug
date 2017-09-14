@@ -1,7 +1,14 @@
 extends includes/layout.pug
 
 block content
+
+  - var categoriesList = list_categories({ show_count: false })
   #category
+    h1 我在categoty.pug这页中
+    if categoriesList
+      != categoriesList
+    else
+      p None.
     h1= page.category
     - page.posts.each(function(article){
       .category-item

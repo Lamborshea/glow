@@ -1,0 +1,27 @@
+- var siteTags= site.tags
+- var tagsList = list_tags({ show_count: true,class: 'tag tag--primary tag--small t',separator: ' '})
+- tagClouds = tagcloud({color: true,start_color: '#b700ff',end_color: '#cdcdcd'})
+div#tag.container-fluid
+  //- if siteTags
+  //-   each tag in siteTags.data
+  //-     ul
+  //-       li= tag.name
+  //- else
+  //-   p none
+
+  if tagsList
+    .row.justify-content-center
+      != tagsList
+  else
+    p none
+
+  //- if tagClouds
+  //-   != tagClouds
+  //- else
+  //-   p none
+  h2(class='archive-year')
+      script(type='text/javascript', charset='utf-8', src='/js/tagcloud.js')
+      script(type='text/javascript', charset='utf-8', src='/js/tagcanvas.js')
+      #myCanvasContainer.widget.tagcloud(align='center')
+          canvas#resCanvas(width='auto', height='500', style='width=100%')
+              !=tagcloud()

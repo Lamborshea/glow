@@ -1,14 +1,22 @@
+- if(is_post()) var pageTag = page.tags.data
+- if(is_post()) var pageKeywords = page.keywords
+- if(is_post()) var categories = page.categories.data
 if config.description
   meta(name="description" content=config.description)
 if page.description
   meta(name="description" content=page.description)
 if page.title
   meta(name="description" content=page.title)
+if page.excerpt
+  meta(name="description" content=page.excerpt)
 if config.keywords
   meta(name="keywords" content=config.keywords)
-//- if page.categories
-//-   meta(name="keywords" content=page.categories)
-//- meta(name="keywords" content=tags)
-//- if page.tags
-//-   each tag in tags
-//-     meta(name="keywords" content=tag)
+if pageKeywords
+  each pageKeyword in pageKeywords
+    meta(name="keywords" content=pageKeyword)
+if pageTag
+  each tag in pageTag
+    meta(name="keywords" content=tag.name)
+if categories
+  each category in categories
+    meta(name="keywords" content=category.name)

@@ -23,3 +23,7 @@ blockquote {
 p code {
   color: lighten($color-post-link,5%);
 }
+
+a {
+  color: $color-font;
+}

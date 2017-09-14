@@ -1,5 +1,7 @@
 # html lang
-language:
+# glow theme support two languages: Chinese and English,you can change language from theme/languages .yml file name just like this:
+# language: zh-cmn-Hans
+language: zh-cmn-Hans
 
 # main menu navigation
 menu:
@@ -11,20 +13,19 @@ menu:
   About: /about
 
 # Miscelaneous
+# favicon can configured by relative link by copy file to theme/img directory,just like this:
+# favicon: /img/favicon.icon
+# also can add permalink of your cdn or cloud link,just link this:
+# favicon: http://ono38scfe.bkt.clouddn.com/favicon_tree.ico
 favicon: /img/favicon.ico
 logo: Nanbo
 
-# stylesheets loaded in the <head>
+# stylesheets loaded in the <head> use url just link this:
+# - /fonts/font-awesome-4.7.0/css/font-awesome.min.css
 stylesheets:
-- /css/glow.css
-- /lib/highlight/highlight-gruvbox-dark.css
-- /fonts/font-awesome-4.7.0/css/font-awesome.min.css
+
 # scripts loaded in the end of the body
+
 scripts:
-# - /js/glow.js
 
 lib:
-- /lib/jquery-3.2.1.min.js
-- /lib/highlight/highlight.pack.js
-- /lib/highlight/activeHighlight.js
-- /lib/backToTop.js
