@@ -23,11 +23,9 @@ html(lang=config.language || theme.language)
       //- stylesheets list from config.yml
       each url in thems.stylesheets
         link(rel='stylesheet', href=url)
-
     link(rel="stylesheet", href=config.root + "lib/highlight/highlight-gruvbox-dark.css")
     link(rel="stylesheet", href=config.root + "fonts/font-awesome-4.7.0/css/font-awesome.min.css")
     link(rel='stylesheet', href=config.root + 'css/glow.css')
-    //- link(rel="icon", href=config.root + 'img/favicon.ico')
     if theme.favicon
       link(rel="icon", href=theme.favicon)
     if config.favicon

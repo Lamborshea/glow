@@ -1,6 +1,16 @@
 # glow
 
-> hexo theme
+> hexo theme width pug and SCSS
+
+## menu
+
+- [Usage](#Usage)
+  - [Download](#Download)
+  - [Configure](#Configure)
+  - [Update theme](#Update-theme)
+- [General](#General)
+- [running and deploying](#running-and-deploying)
+- [TODO](#TODO)
 
 ## Usage
 ### Download
@@ -45,11 +55,12 @@ git pull
 ## General
 
 Author : [Lambor_shea](https://github.com/Lamborshea)  
+language: pug scss   
 Version : 1.0.0  
 Compatibility : Node v4 or later, Hexo v3.0.0 or later  
 
 ## running and deploying
-
+If you changed root `_config.yml` or `glow/_config.yml`, you should type `hexo clean` and do other work.
 ```bash
 hexo clean
 hexo g
@@ -63,3 +74,7 @@ hexo s
 - [ ] fancybox 支持
 - [ ] 添加阅读人数
 - [ ] SEO优化
+- [ ] toc 栏浏览文章时固定并且实现阅读位置高亮
+- [ ] 添加一些动画
+- [ ] 归档页按年份归档
+- [ ] 添加一个展示个人信息（头像，描述，网站浏览次数，个人社交账号的 logo）的 widget
