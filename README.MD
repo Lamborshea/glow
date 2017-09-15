@@ -55,3 +55,11 @@ hexo clean
 hexo g
 hexo s
 ```
+
+## TODO
+
+- [ ] 导航栏菜单响应式设计
+- [ ] 部分 js 文件延迟加载
+- [ ] fancybox 支持
+- [ ] 添加阅读人数
+- [ ] SEO优化
