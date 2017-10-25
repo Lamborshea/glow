@@ -1,0 +1,21 @@
+- var GitHub = 'https://www.github.com/'
+
+p.footer.row.justify-content-center
+  span &copy; Lambor_shea's Blog 2016 - 2017
+p.footer.row.justify-content-center
+  span.powered-by Site theme
+    a.footer-link(href="https://github.com/Lamborshea/glow")
+      span=' ' + config.theme
+  span.powered-by Designed and developed by
+  if theme.social
+    if theme.social.GitHub
+      a.footer-link(href=theme.social.GitHub target="blank")
+        span=' ' + config.author
+  else
+    a.footer-link(href=GitHub)
+      span=' ' + config.author
+  span.powered-by Powered by
+    a.footer-link(href='http://hexo.io')
+      span= ' ' + 'hexo'
+p.footer.row.justify-content-center!= "Hosted by &nbsp;"
+  a.footer-link(href="https://pages.coding.me" style="font-weight: bold" target="blank")="Coding Pages"

@@ -14,40 +14,12 @@
 doctype html
 html(lang=config.language || theme.language)
   head
-    meta(charset='UTF-8')
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
     include head.pug
     title= pageTitle
-    if theme.stylesheets !== null && theme.stylesheets.length > 0
-      //- stylesheets list from config.yml
-      each url in thems.stylesheets
-        link(rel='stylesheet', href=url)
-    link(rel="stylesheet", href=config.root + "lib/highlight/highlight-gruvbox-dark.css")
-    link(rel="stylesheet", href=config.root + "fonts/font-awesome-4.7.0/css/font-awesome.min.css")
-    link(rel='stylesheet', href=config.root + 'css/glow.css')
-    if theme.favicon
-      link(rel="icon", href=theme.favicon)
-    if config.favicon
-      link(rel="icon", href=config.favicon)
   body
-    #menu-outer.container-fluid
+    header#menu-outer.container-fluid(role="banner")
       nav#menu-inner.row.justify-content-center
-        ul.navbar-menu
-            li.navbar-item
-              a.logo(href=url_for()).navbar-item-link= theme.logo
-            li.navbar-item
-              a(href=url_for()).navbar-item-link= __('menu.home')
-            li.navbar-item
-              a(href=url_for('archives')).navbar-item-link= __('menu.archives')
-            li.navbar-item
-              a(href=url_for('categories')).navbar-item-link= __('menu.categories')
-            li.navbar-item
-              a(href=url_for('tags')).navbar-item-link=__('menu.tags')
-            li.navbar-item
-              a(href=url_for('projects')).navbar-item-link= __('menu.projects')
-            li.navbar-item
-              a(href=url_for('about')).navbar-item-link= __('menu.about')
+        include header.pug
     .container
       #content-outer
         #content-inner
@@ -56,24 +28,9 @@ html(lang=config.language || theme.language)
           else
             block content
     .container
-      #bottom-outer
+      footer#bottom-outer(role="footer")
         #bottom-inner
-          p.footer.row.justify-content-center
-            span &copy; Lambor_shea's Blog 2016 - 2017
-          p.footer.row.justify-content-center
-            span.powered-by Site theme
-              a.footer-link(href="https://github.com/Lamborshea/glow")
-                span=' ' + config.theme
-            span.powered-by Designed and developed by
-              a.footer-link(href="https://github.com/Lamborshea/")
-                span=' ' + config.author
-            span.powered-by Powered by
-              a.footer-link(href='http://hexo.io')
-                span= ' ' + 'hexo'
-          p.footer.row.justify-content-center!= "Hosted by&nbsp;"
-            a(href="https://pages.coding.me" style="font-weight: bold")="Coding Pages"
-          //- p.footer.row.justify-content-center
-          //-   a.footer-link(href=config.root) Home
+          include footer.pug
     include ../components/backToTop.pug
     if theme.scripts !== null && theme.scripts.length > 0
         //- scripts list from config.yml

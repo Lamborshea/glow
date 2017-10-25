@@ -1,22 +1,78 @@
 - if(is_post()) var pageTag = page.tags.data
-- if(is_post()) var pageKeywords = page.keywords
 - if(is_post()) var categories = page.categories.data
+meta(charset='UTF-8')
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
+
+if theme.stylesheets !== null && theme.stylesheets.length > 0
+  //- stylesheets list from config.yml
+  each url in theme.stylesheets
+    link(rel='stylesheet', href=url)
+link(rel="stylesheet", href=config.root + "lib/highlight/highlight-gruvbox-dark.css")
+link(rel="stylesheet", href=config.root + "fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+link(rel='stylesheet', href=config.root + 'css/glow.css')
+
 if config.description
   meta(name="description" content=config.description)
-if page.description
-  meta(name="description" content=page.description)
-if page.title
-  meta(name="description" content=page.title)
+//- TODO: 获取的excerpt内容前面带有!toc等文字
+
 if page.excerpt
-  meta(name="description" content=page.excerpt)
+  meta(name="description" content!=page.excerpt)
+
 if config.keywords
   meta(name="keywords" content=config.keywords)
-if pageKeywords
-  each pageKeyword in pageKeywords
-    meta(name="keywords" content=pageKeyword)
+
 if pageTag
   each tag in pageTag
     meta(name="keywords" content=tag.name)
+
 if categories
   each category in categories
     meta(name="keywords" content=category.name)
+
+//- Disable Baidu tranformation
+
+meta(http-equiv="Cache-Control" content="no-transform" )
+meta(http-equiv="Cache-Control" content="no-siteapp" )
+
+//- site_verification
+if theme.google_site_verification
+  meta(name="google-site-verification" content=theme.google_site_verification)
+
+if theme.bing_site_verification
+  meta(name="msvalidate.01" content=theme.bing_site_verification)
+
+if theme.yandex_site_verification
+  meta(name="yandex-verification" content=theme.yandex_site_verification)
+
+if theme.baidu_site_verification
+  meta(name="baidu-site-verification" content=theme.baidu_site_verification)
+
+if theme.qihu_site_verification
+  meta(name="360-site-verification" content=theme.qihu_site_verification)
+
+//- favicons
+if theme.favicon
+  link(rel="icon", href=theme.favicon)
+
+if config.favicon
+  link(rel="icon", href=config.favicon)
+
+if theme.favicon.apple_touch_icon
+  link(rel="apple-touch-icon" sizes="180x180" href=theme.favicon.apple_touch_icon)
+
+if theme.favicon.medium
+  link(rel="icon" type="image/png" sizes="32x32" href=theme.favicon.medium)
+
+//- TODO:BUG
+if theme.favicon.small
+  link(rel="icon" type="image/png" sizes="16x16" href=theme.favicon.small)
+
+if theme.favicon.safari_pinned_tab
+  link(rel="mask-icon" href=theme.favicon.safari_pinned_tab color=theme.android_chrome_color)
+
+if theme.favicon.android_manifest
+  link(rel="manifest" href=theme.favicon.android_manifest)
+
+if theme.favicon.ms_browserconfig
+  meta(name="msapplication-config" content=theme.favicon.ms_browserconfig)

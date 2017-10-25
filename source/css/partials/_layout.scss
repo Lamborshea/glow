@@ -56,7 +56,7 @@
 }
 
 .footer {
-    margin: .2em auto;
+    margin: .4em auto;
     font-size: .9em;
 }
 
@@ -69,8 +69,7 @@
 
   &:hover {
     color: $color-link;
-    padding-bottom: 2px;
-    border-bottom: 1px solid $color-link;
+    text-decoration: underline;
   }
 }
 

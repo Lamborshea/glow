@@ -1,0 +1,15 @@
+ul.navbar-menu
+  li.navbar-item
+    a.logo(href=url_for()).navbar-item-link= theme.logo
+  li.navbar-item
+    a(href=url_for()).navbar-item-link= __('menu.home')
+  li.navbar-item
+    a(href=url_for('archives')).navbar-item-link= __('menu.archives')
+  //- li.navbar-item
+  //-   a(href=url_for('categories')).navbar-item-link= __('menu.categories')
+  //- li.navbar-item
+  //-   a(href=url_for('tags')).navbar-item-link=__('menu.tags')
+  //- li.navbar-item
+  //-   a(href=url_for('projects')).navbar-item-link= __('menu.projects')
+  //- li.navbar-item
+  //-   a(href=url_for('about')).navbar-item-link= __('menu.about')
